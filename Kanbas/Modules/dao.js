@@ -1,6 +1,7 @@
 import model from "./model.js";
 
 export function findModulesForCourse(courseId) {
+  console.log("courseId", courseId);
   return model.find({ course: courseId });
 }
 
