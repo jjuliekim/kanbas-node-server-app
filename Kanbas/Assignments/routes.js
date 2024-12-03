@@ -1,5 +1,3 @@
-// implement routes for creating, retrieving, updating, and deleting assignments
-
 import * as assignmentsDao from "./dao.js";
 
 export default function AssignmentRoutes(app) {

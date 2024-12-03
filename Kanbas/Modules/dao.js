@@ -1,7 +1,6 @@
 import model from "./model.js";
 
 export function findModulesForCourse(courseId) {
-  console.log("courseId", courseId);
   return model.find({ course: courseId });
 }
 
@@ -15,5 +14,5 @@ export function deleteModule(moduleId) {
 }
 
 export function updateModule(moduleId, moduleUpdates) {
-  return model.updateOne({ _id: moduleId }, { $set: moduleUpdates });
+  return model.updateOne({ _id: moduleId }, moduleUpdates);
 }

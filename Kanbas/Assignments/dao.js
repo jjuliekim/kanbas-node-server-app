@@ -1,6 +1,4 @@
-// implement creating, retrieving, updating, and deleting assignments
-
-import Database from "../Database/index.js";
+import model from "./model.js";
 
 export function findAssignmentsForCourse(courseId) {
   const { assignments } = Database;
@@ -8,9 +6,8 @@ export function findAssignmentsForCourse(courseId) {
 }
 
 export function createAssignment(assignment) {
-  const newAssignment = { ...assignment, _id: Date.now().toString() };
-  Database.assignments = [...Database.assignments, newAssignment];
-  return newAssignment;
+  delete assignment._id;
+  return model.create(assignment);
 }
 
 export function deleteAssignment(assignmentId) {
