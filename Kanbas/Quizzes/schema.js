@@ -9,6 +9,7 @@ const schema = new mongoose.Schema(
     availableFrom: Date,
     points: Number,
     numQuestions: Number,
+    published: Boolean,
   },
   { collection: "quizzes" }
 );
