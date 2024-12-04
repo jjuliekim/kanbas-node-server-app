@@ -4,8 +4,13 @@ const schema = new mongoose.Schema(
   {
     title: String,
     course: String,
+    description: String,
+    dueDate: Date,
+    availableFrom: Date,
+    untilDate: Date,
+    points: Number,
   },
-  { collection: "assignments" }
+  { collection: "assignments2" }
 );
 
 export default schema;
