@@ -7,10 +7,10 @@ const schema = new mongoose.Schema(
     description: String,
     dueDate: Date,
     availableFrom: Date,
-    untilDate: Date,
     points: Number,
+    numQuestions: Number,
   },
-  { collection: "assignments2" }
+  { collection: "quizzes" }
 );
 
 export default schema;
