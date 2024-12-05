@@ -22,11 +22,9 @@ const schema = new mongoose.Schema(
     oneQuestionAtATime: Boolean,
     webcamRequired: Boolean,
     lockQuestions: Boolean,
-    scores: {
-      type: Map,
-      of: Number,
-      default: {}
-    },
+    questions: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "QuestionModel" },
+    ],
   },
   { collection: "quizzes" }
 );
