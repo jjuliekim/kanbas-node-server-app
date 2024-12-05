@@ -124,7 +124,7 @@ export default function UserRoutes(app) {
       uid = currentUser._id;
     }
     const status = await enrollmentsDao.unenrollUserFromCourse(uid, cid);
-    res.sendStatus(status);
+    res.sendStatus(204);
   };
 
 
