@@ -20,3 +20,7 @@ export async function deleteQuestion(quizId, questionId) {
   quiz.questions = quiz.questions.filter((id) => id.toString() !== questionId);
   await quiz.save();
 }
+
+export function findQuizById(quizId) {
+  return QuizModel.findById(quizId);
+}

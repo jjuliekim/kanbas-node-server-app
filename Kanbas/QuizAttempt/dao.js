@@ -24,6 +24,6 @@ export function updateQuizAttempt(quizAttemptId, quizAttemptUpdates) {
   return model.updateOne({ _id: quizAttemptId }, quizAttemptUpdates);
 }
 
-export function findAttemptsForUserQuiz(quizId, userId) {
-  return model.find({ quiz: quizId, user: userId });
+export function findAttemptForUserQuiz(quizId, userId) {
+  return model.findOne({ quiz: quizId, user: userId });
 }
