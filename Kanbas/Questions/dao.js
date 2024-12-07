@@ -15,7 +15,6 @@ export function updateQuestion(quizId, questionId, questionData) {
 }
 
 export async function deleteQuestion(quizId, questionId) {
-  // return model.findOneAndDelete({ _id: questionId, quiz: quizId });
   await model.findOneAndDelete({ _id: questionId, quiz: quizId });
   const quiz = await QuizModel.findById(quizId);
   quiz.questions = quiz.questions.filter((id) => id.toString() !== questionId);
